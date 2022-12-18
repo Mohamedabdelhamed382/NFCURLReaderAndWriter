@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "testfairy-ios-sdk-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/testfairy/testfairy-ios-sdk-swift-package",
+      "state" : {
+        "revision" : "0b88eeea5679ab9752a4d416fcc2c66c7691dc0f",
+        "version" : "1.29.9"
+      }
+    }
+  ],
+  "version" : 2
+}

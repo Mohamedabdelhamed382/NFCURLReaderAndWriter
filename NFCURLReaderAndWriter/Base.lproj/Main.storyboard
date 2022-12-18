@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NFCURLReaderAndWriter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uGg-Wu-3NO">
+                                <rect key="frame" x="20" y="69.333333333333329" width="350" height="184.66666666666669"/>
+                                <color key="tintColor" systemColor="systemGrayColor"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="please Enter your URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="98f-NC-Wka">
+                                <rect key="frame" x="10" y="392" width="370" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="sNK-Da-pQk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvf-QP-DvY">
+                                <rect key="frame" x="105.66666666666667" y="472" width="178.66666666666663" height="35"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="press to Active NFC " cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="activateBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HGM-kh-gQw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uGg-Wu-3NO" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.224092" id="1VI-9h-Lsf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uGg-Wu-3NO" secondAttribute="trailing" constant="20" id="1eg-VY-6Ys"/>
+                            <constraint firstItem="Hvf-QP-DvY" firstAttribute="centerX" secondItem="98f-NC-Wka" secondAttribute="centerX" id="O1H-Q1-lPh"/>
+                            <constraint firstItem="98f-NC-Wka" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="c8O-vS-9Lz"/>
+                            <constraint firstItem="uGg-Wu-3NO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eLP-Bp-QGc"/>
+                            <constraint firstItem="Hvf-QP-DvY" firstAttribute="top" secondItem="98f-NC-Wka" secondAttribute="bottom" constant="20" id="gFZ-Ig-X4E"/>
+                            <constraint firstItem="uGg-Wu-3NO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mA7-53-amL"/>
+                            <constraint firstItem="98f-NC-Wka" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="vDJ-pz-BAI"/>
+                            <constraint firstItem="uGg-Wu-3NO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wj5-dM-DpL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="98f-NC-Wka" secondAttribute="trailing" constant="10" id="xah-1W-HgN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnActiveNFC" destination="Hvf-QP-DvY" id="msP-G5-l4U"/>
+                        <outlet property="urlTextField" destination="98f-NC-Wka" id="AAU-gr-1N5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.92307692307692" y="-2.1327014218009479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wifi" catalog="system" width="128" height="90"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
